@@ -1,29 +1,37 @@
 <ion-content padding>
-
-  <ion-content padding>
-    <ion-list>
-
-      <ion-item>
-          <ion-label fixed>Name</ion-label>
-          <ion-input type="text" value=""></ion-input>
-        </ion-item>
-
+  <form [formGroup]="myform">
+    <fieldset formGroupName="userdetails">
+      <div>
         <ion-item>
-            <ion-label fixed>Email</ion-label>
-            <ion-input type="text" value=""></ion-input>
-          </ion-item>
-  
-      <ion-item>
-        <ion-label fixed>Username</ion-label>
-        <ion-input type="text" value=""></ion-input>
-      </ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" formControlName='firstname' name='title'></ion-input>
+        </ion-item>
+      </div>
+
+  <div>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" formControlName='username' name='title'></ion-input>
+    </ion-item>
+  </div>
+</fieldset>
+
+  <div>
+  <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" formControlName='email' name='title'></ion-input>
+  </ion-item>
+  </div>
+
+  <div>
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" formControlName='password' name='title'></ion-input>
+    </ion-item>
+  </div>
+
+    <button ion-button block type="submit" (click)="signup()" color="primary" class="marginTop">Login</button>
     
-      <ion-item>
-        <ion-label fixed>Password</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-    
-    </ion-list>
-    <button ion-button block (click)="signup()" color="primary" class="marginTop">Login</button>
-  </ion-content>
+    <pre> {{ myform.value | json }} </pre>
+  </form>
 </ion-content>
