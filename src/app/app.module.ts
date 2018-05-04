@@ -10,6 +10,11 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LosefatPage } from '../pages/losefat/losefat';
+import { BuildmusclePage } from '../pages/buildmuscle/buildmuscle';
+import { GetstrongerPage } from '../pages/getstronger/getstronger';
+import { EndurancePage } from '../pages/endurance/endurance';
+import { FlexibilityPage } from '../pages/flexibility/flexibility';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +31,12 @@ import { RemoteProvider } from '../providers/remote/remote';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LosefatPage,
+    BuildmusclePage,
+    GetstrongerPage,
+    EndurancePage,
+    FlexibilityPage
   ],
   imports: [
     BrowserModule,

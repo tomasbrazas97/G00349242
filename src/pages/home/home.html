@@ -1,13 +1,15 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title item-start>Home</ion-title>
+    <img src="assets/imgs/logo.png" class="logo" item-end>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <h2>Welcome to MyFitnessGoal!</h2>
   <!---<h1>Welcome {{username}}</h1> -->
-  <h2>Please select a category based on your goal in fitness</h2>
+  <h2>Please select a category based on your goal in fitness.</h2>
+  <p>Each category is designed to inform you about your specific chosen goal.</p>
 
 <ion-list>
   <ion-item>
@@ -56,6 +58,8 @@
           </ion-item>
 </ion-list>
 
+<h2>Extra resources</h2>
+<p>Some resources that might prove useful towards achieving your goal.</p>
   <button ion-button (click)="logout()" color="primary" class="marginTop">Logout</button>
 
 </ion-content>
