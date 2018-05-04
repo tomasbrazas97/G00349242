@@ -53,7 +53,12 @@ import { RemoteProvider } from '../providers/remote/remote';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    LosefatPage,
+    BuildmusclePage,
+    GetstrongerPage,
+    EndurancePage,
+    FlexibilityPage
   ],
   providers: [
     StatusBar,
