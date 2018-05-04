@@ -1,5 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {Http} from '@angular/http';
+import {Observable} from 'rxjs';
+import 'rxjs/add/operator/map';
+
 
 /*
   Generated class for the RemoteProvider provider.
@@ -10,8 +13,12 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class RemoteProvider {
 
-  constructor(public http: HttpClient) {
-    console.log('Hello RemoteProvider Provider');
-  }
+  constructor(private http: Http) {}
+
+  GetWeatherData():Observable<any>{
+    return this.http.get("http://api.openweathermap.org/data/2.5/weather?q=Galway&APPID=8883565d0d3225d6cc606b859f096b6a")
+    .map(obs => obs.json());
+  }    
+  
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -13,7 +13,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-endurance',
   templateUrl: 'endurance.html',
 })
-export class EndurancePage {
+export class EndurancePage{
+ 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -21,5 +22,6 @@ export class EndurancePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad EndurancePage');
   }
-
+  
+  
 }
