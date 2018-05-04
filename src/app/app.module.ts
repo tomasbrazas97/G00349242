@@ -49,7 +49,7 @@ import { RemoteProvider } from '../providers/remote/remote';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RemoteProvider
+    RemoteProvider,
   ]
 })
 export class AppModule {}
