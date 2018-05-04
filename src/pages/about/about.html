@@ -1,11 +1,41 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      About MyFitnessGoals
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <div>
+    <h2>Helping to achieve your goals!</h2>
+    <p>The application is designed to inform
+      a beginner about fitness based on the individuals goals in fitness.
+      Application describes each category that's present
+      to this date on the application in detail.
+    </p>
+  </div>
 
+  <h2>How was your overall experience?</h2>
+  <p>We'd like to know!</p>
+  <ion-list radio-group [(ngModel)]="opinion">
+  <ion-item >
+    <ion-icon name="happy" item-start></ion-icon>
+    <ion-radio value="Good"></ion-radio>
+    <ion-label>
+      Good
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="sad" item-start></ion-icon>
+    <ion-radio value="Bad"></ion-radio>
+    <ion-label>
+        Bad
+      </ion-label>
+  </ion-item>
+</ion-list>
+
+  <button ion-button block (click)="store()" color="primary">Let Us Know!</button>
+
+  <h4>Your current opinion of the application: {{opinion}}</h4>
 </ion-content>
