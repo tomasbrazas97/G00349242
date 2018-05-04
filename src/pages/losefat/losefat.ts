@@ -16,8 +16,9 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'losefat.html',
 })
 export class LosefatPage {
-activityLevel: string;
+activityLevel: number;
 weight : number;
+sum : number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
@@ -26,13 +27,15 @@ weight : number;
     console.log('ionViewDidLoad LosefatPage');
   }
 
-  calculate(){
+  //store data
+  store(){
     this.storage.set("activityLevel", this.activityLevel);
     this.storage.set("weight", this.weight);
     console.log("activityLevel " + this.activityLevel);
     console.log("weight " + this.weight);
   }
 
+  //retrieve data from storage and calculate
   show(){
     this.storage.get("weight")
     .then((data) => {
@@ -45,5 +48,19 @@ weight : number;
       .catch((err) => {
       console.log("Error = " + err);
     })
+
+    this.storage.get("activityLevel")
+    .then((data) => {
+    if (data == null) {
+      console.log("activityLevel not in storage");
+    } else {
+      console.log("activityLevel = " + data);
+    }
+    })
+      .catch((err) => {
+      console.log("Error = " + err);
+    })
+    
+    this.sum = this.weight * this.activityLevel - 500;
   }
 }
