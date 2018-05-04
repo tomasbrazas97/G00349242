@@ -1,17 +1,20 @@
 
 <ion-content padding>
-  <ion-list>
 
-    <ion-item>
-      <ion-label fixed>Username</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label fixed>Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  
-  </ion-list>
-  <button ion-button block (click)="login()" color="primary" class="marginTop">Login</button>
+    <ion-list>
+
+        <ion-item>
+            <ion-label fixed>Username</ion-label>
+            <ion-input type="text" ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <button primary block color="primary" class="marginTop" (click)="login()">Login</button>
+
 </ion-content>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the SignupPage page.
@@ -19,25 +20,28 @@ export class SignupPage {
   myform: FormGroup;
 
   //reactive form
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
     this.myform = new FormGroup({
       //nested formgroup
       userdetails: new FormGroup({
           username: new FormControl('', [Validators.required, Validators.minLength(5)]),
-          firstname: new FormControl('', Validators.required),
-          
+          firstname: new FormControl('', Validators.required),       
       }),
       password: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.pattern("_+\@_+\--+")), 
+      email: new FormControl('', Validators.pattern("_+\@.+\__+")), 
     })
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }
 
 
-  signup(){
-    this.navCtrl.push(TabsPage);
+  signup(value: any): void{
+      window.localStorage.setItem('username', value.username);
+      window.localStorage.setItem('password', value.password);
+      
+      this.navCtrl.push(TabsPage);
   }
 }
