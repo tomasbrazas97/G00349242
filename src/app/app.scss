@@ -1,9 +1,26 @@
 // http://ionicframework.com/docs/theming/
 
 .logo{
-    height: 100px;
-    float:right;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    height: 50%;
 }
+
+.header{
+    text-align: center;
+}
+
+.header2{
+    text-align: center;
+    color: white;
+}
+
+    
+  
+
+
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
