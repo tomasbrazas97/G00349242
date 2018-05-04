@@ -39,8 +39,8 @@ export class SignupPage {
 
 
   signup(value: any): void{
-      window.localStorage.setItem('username', value.username);
-      window.localStorage.setItem('password', value.password);
+     // window.localStorage.setItem('username', value.username);
+     // window.localStorage.setItem('password', value.password);
       
       this.navCtrl.push(TabsPage);
   }
