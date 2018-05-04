@@ -1,18 +1,123 @@
-<!--
-  Generated template for the LosefatPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>losefat</ion-title>
+    <ion-title>Losing fat</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <div>
+    <h2>Losing fat and maintenance</h2>
+    <h2>Here are some tips to lose fat and maintain your body</h2>
+    <p>You can lose fat any pace you choose, but should strive
+      to be as efficient as possible. To lose fat a caloric deficit
+      is needed.
+      <b>A specific caloric calculator can be found on this page.</b>
+    </p>
+</div>
 
+<div>
+  <h3>Tip 1: Food</h3>
+  <p>To lose fat, you've got to remove all the unhealthy fatty foods
+    such as fried food and fast food from your diet. Cheat days are acceptable
+    once in a while but do not get too comfortable with them and ruin your progress.
+    A caloric deficit is required to lose weight. There are many beneficial foods
+    that can be consumed to burn fat and stay healthy. Below is a
+    compiled list of the best of the best fat burning foods that should be eaten
+    when your goal is to lose fat.
+  </p>
+  <ion-list>
+    <ion-item>Chicken/Turkey</ion-item>
+    <p>As you lose weight, you burn muscle too, for maintenace chicken and turkey should
+      be consumed to target this problem.
+    </p>
+    <ion-item>Eggs</ion-item>
+    <p>Eggs contain healthy fats and keep you energized for a long period of time so you
+      can maintain muscle while you're burning fat. They are rich in protein.
+    </p>
+    <ion-item>Avocados</ion-item>
+    <p>Avocados are a perfect source of monounsaturated fats, fiber and potassium.
+      They reduce bloating which is a great effect when burning fat. Avocados are dense
+      in calories and should be consumed in moderation.
+    </p>
+    <ion-item>Dark leafy greens</ion-item>
+    <p>Dark, leafy vegetables contain a lot of iron, which is needed to support efficient oxygen
+      transport throughout your body. So your green salad helps you maximize your workout
+      by building muscle at the same time you're burning fat.
+    </p>
+    <ion-item>Whole grains</ion-item>
+    <p>Whole grains such as brown rice and oats are rich in carbohydrates. Carbohydrates are your body's go to
+      fuel source. Usually people cut our carbs for weight loss, but regularly eating complex carbohydrates actually helps
+      your metabolism. Avoiding carbohydrates will make you feel sluggish as your body is running out of fuel. Avoid carbohydrates that are processed.
+    </p>
+  </ion-list>
+</div>
+
+<div>
+  <h3>Tip 2: Commit to Sleep</h3>
+  <p>Sleep is another underrated part of a proper fat-loss program. If you aren't sleeping enough, your insulin sensitivity will decrease, which means that hormone will 
+    be less effective at shuttling glucose from your blood into cells, where it belongs. So what does your body do? It pumps out more insulin, still hoping to finish the job.
+    The problem is that insulin is also a fat-storage hormone.
+    Since your cells will be starved for glucose also means you'll encounter carbohydrate cravings and lousy workouts.
+      
+    Few healthy food choices are made after midnight. Going to bed an extra hour early is also a perfect way to combat night-time eating, which can be disastrous to your progress.</p>
+</div>
+
+<div>
+  <h3>Tip 3: Switch to Single-Ingredient Foods</h3>
+  <p>Tip to remember that will dramatically help you improve the quality of your diet is to only eat single-ingredient foods.
+      You'll immediately cut out all the processed, unhealthy foods that can quickly put a stop to weight loss and have you feeling unwell.
+      Single ingredient foods are in their most natural state and will contain the most nutrition to help keep your body healthy throughout the weight-loss process.   
+  </p>
+</div>
+
+<div>
+  <h3>Tip 4: Increase Protein Intake</h3>
+  <p>Increase your ptein intake by 10-20%. A higher protein intake is the next step to seeing enhanced fat loss. Not only will 
+    protein-rich foods calm hunger pangs, but they also have a higher thermogenic effect as well. Thermo-what? Well, for every 
+    100 calories you eat, your body will burn about 20-30 percent of those calories off simply breaking down the food. This means
+    you will net fewer calories increasing caloric deficit. The higher the deficit, the greater the fat loss is. Protein also reduces the chance
+    of muscle loss and helps maintain fast metabolism long-term.
+  </p>
+</div>
+
+<h2>Caloric Deficit Calculator</h2>
+<p>Fill in the blanks to find out your caloric deficit</p>
+<div>
+  <ion-item>
+      <ion-icon name="body" item-start></ion-icon>
+      <ion-label floating>Height</ion-label>
+      <ion-input type="text" name='title'></ion-input>
+    </ion-item>
+
+  <ion-item>
+      <ion-icon name="leaf" item-start></ion-icon>
+      <ion-label floating>Weight (Imperial)</ion-label>
+      <ion-input type="text" [(ngModel)]="weight" name='title'></ion-input>
+    </ion-item>
+
+
+    <p>Activity Level: {{activityLevel}}</p>
+    <ion-list  radio-group [(ngModel)]="activityLevel">
+      <ion-item>
+          <ion-icon name="game-controller-a" item-start></ion-icon>
+          <ion-label>14</ion-label>
+          <ion-radio value="low"></ion-radio>
+      </ion-item>
+      <ion-item>
+          <ion-icon name="walk" item-start></ion-icon>
+          <ion-label>15</ion-label>
+          <ion-radio value="medium"></ion-radio>
+      </ion-item>
+      <ion-item>
+          <ion-icon name="bicycle" item-start></ion-icon>
+          <ion-label>16</ion-label>
+          <ion-radio value="high"></ion-radio>
+      </ion-item>
+    </ion-list>
+    <button ion-button block (click)="calculate()" color="primary">Submit</button>
+    <button ion-button block (click)="show()" color="primary">Submit</button>
+</div>
 </ion-content>
